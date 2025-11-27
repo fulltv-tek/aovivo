@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="https://simp6.jpg5.su/images3/capas-full-tv-2d8838c037acce422.png" type="image/png">
+  <title>Fulltv • Canais ao Vivo</title>
+
+  <!-- Google Fonts (Kids) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&display=swap" rel="stylesheet">
+
+  <!-- CSS base do site -->
+  <link rel="stylesheet" href="style.css?v=15">
+
+  <!-- Estilos da aba Esportes + overlay do player -->
+  <style>
+    /* ---------- ABAS (Jogos ao vivo) ---------- */
+    .sports-tabs { display:flex; gap:8px; margin:6px 0 10px 0; }
+    .sports-tab {
+      appearance:none; border:1px solid #2a2f3a; background:#121418; color:#e6edf3;
+      padding:8px 12px; border-radius:10px; font-weight:600; cursor:pointer;
+      transition:filter .12s ease, transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .sports-tab:hover{ filter:brightness(1.06); transform: translateY(-1px); }
+    .sports-tab.active { background:#1f6feb; border-color:#1f6feb; color:#fff; }
+
+    /* ---------- LISTA DE EVENTOS (lado esquerdo) ---------- */
+    .event-card{
+      display:flex; align-items:center; gap:10px; padding:10px;
+      border:1px solid #2a2f3a; border-radius:12px; background:#0f1115;
+      margin-bottom:8px; cursor:pointer; text-align:left;
+      transition: filter .12s ease, transform .12s ease, border-color .12s ease;
+      /* força contraste do texto dentro do card */
+      color:#e6edf3;
+    }
+    .event-card:hover{ filter:brightness(1.05); transform: translateY(-1px); border-color:#3a455a; }
+    .event-thumb{ flex:0 0 56px; height:56px; border-radius:10px; overflow:hidden; background:#151821; display:flex; align-items:center; justify-content:center; }
+    .event-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .event-meta{ display:flex; flex-direction:column; min-width:0; }
+    .event-title{
+      font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+      /* >>> ajuste de legibilidade */
+      color:#f8fafc !important;
+      text-shadow: 0 1px 1px rgba(0,0,0,.65);
+    }
+    .event-sub{
+      font-size:12px;
+      /* >>> ajuste de legibilidade */
+      color:#cbd5e1 !important;
+      text-shadow: 0 1px 1px rgba(0,0,0,.45);
+    }
+    .badge-dot{ display:inline-flex; align-items:center; gap:6px; font-size:11px; padding:4px 8px; border-radius:999px; margin-left:8px; }
+    .badge-live{ background:#b4232a; color:#fff; }
+    .badge-up{ background:#2b3a55; color:#dbeafe; }
+
+    /* ---------- OVERLAY DO PLAYER (título em cima do vídeo) ---------- */
+    .player-container{ position:relative; }
+    .info-bar{
+      position:absolute; left:0; right:0; bottom:0; padding:18px 22px;
+      background: linear-gradient(to top, rgba(12,14,18,.92) 0%, rgba(12,14,18,.58) 50%, rgba(12,14,18,0) 100%);
+      border-radius:0 0 16px 16px; color:#e6edf3; z-index:2; pointer-events:none;
+    }
+    .meta-label{ font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#cbd5e1; opacity:.85; }
+    .meta-row{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+    .meta-title{ margin:4px 0 0; font-size:26px; font-weight:900; line-height:1.15; color:#f8fafc; text-shadow: 0 2px 6px rgba(0,0,0,.45), 0 1px 1px rgba(0,0,0,.4); }
+    .meta-subtitle{ font-size:14px; color:#cbd5e1; opacity:.96; text-shadow: 0 1px 2px rgba(0,0,0,.35); }
+
+    /* Avisos/fallback do player */
+    .player-notice{margin-top:12px;padding:12px 14px;border-radius:10px;background:#101216;color:#e2e8f0;border:1px solid #2a2f3a;font-size:14px;line-height:1.35;}
+    .player-open{display:inline-block;margin-top:8px;padding:10px 14px;border-radius:10px;background:#1f6feb;color:#fff;text-decoration:none;font-weight:600;}
+    @media (max-width:520px){ .event-title{font-size:14px} .event-sub{font-size:11px} .meta-title{font-size:20px} }
+  </style>
+</head>
+<body>
+  <!-- (Opcional) Base da API do seu conector -->
+  <script>
+    // window.SPORTS_API_BASE = 'https://seu-conector.exemplo/api';
+  </script>
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="left">
+      <div class="logo">F</div>
+      <span class="brand">Fulltv</span>
+    </div>
+
+    <nav class="menu">
+      <button data-tab="TODOS OS CANAIS" class="active">Todos os canais</button>
+      <button data-tab="JOGOS AO VIVO">⚽ Jogos ao vivo</button>
+      <button data-tab="ABERTOS">Abertos</button>
+      <button data-tab="ESPORTES">Esportes</button>
+      <button data-tab="VARIEDADES">Variedades</button>
+      <button data-tab="KIDS" class="kids-font" title="Kids">
+        <span class="kids-k">K</span><span class="kids-i">I</span><span class="kids-d">D</span><span class="kids-s">S</span>
+      </button>
+      <button data-tab="DESTAQUES">Destaques</button>
+    </nav>
+
+    <div class="right">
+      <div id="clock" class="clock">--:--</div>
+    </div>
+  </header>
+
+  <!-- GRID -->
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">Lista de Canais</div>
+
+      <!-- host das abas de esportes -->
+      <div id="sportsTabsHost" style="display:none"></div>
+      <div id="channelList" class="channel-list thin-scroll"></div>
+
+      <div class="hint">↑/↓ para navegar • Enter para assistir</div>
+    </aside>
+
+    <!-- Player -->
+    <section id="playerContainer" class="player-container">
+      <div id="playShield" class="play-shield" style="display:flex">
+        <button id="playBtn" class="play-btn" type="button" aria-label="Reproduzir">▶ Reproduzir</button>
+      </div>
+
+      <iframe
+        id="player"
+        src="about:blank"
+        title="Player"
+        allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+        allowfullscreen
+        referrerpolicy="no-referrer"
+        playsinline
+      ></iframe>
+
+      <div class="live-pill"><span class="dot"></span> AO VIVO</div>
+      <button id="btnFullscreen" class="btn-fs" title="Tela cheia">⤢</button>
+
+      <!-- avisos/fallback -->
+      <div id="playerNotice" class="player-notice" style="display:none"></div>
+      <a id="playerOpen" class="player-open" href="#" target="_blank" rel="noopener noreferrer" style="display:none">Abrir em nova aba ↗</a>
+
+      <div id="infoBar" class="info-bar">
+        <div class="meta">
+          <div class="meta-label">Canal</div>
+          <div class="meta-row">
+            <h3 id="infoTitle" class="meta-title">—</h3>
+            <div id="infoSubtitle" class="meta-subtitle">—</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Todos os direitos reservados ao Fulltv © 2025</footer>
+
+  <!-- Scripts -->
+  <script src="channels.js?v=15"></script>
+  <script src="script.js?v=15"></script>
+</body>
+</html>

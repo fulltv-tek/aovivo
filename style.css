@@ -1,0 +1,132 @@
+:root{
+  --bg1:#7c1a1f; --bg2:#4b0d10; --bg3:#250608;
+  --text:#ffffff; --textDim:rgba(255,255,255,.7);
+  --border:rgba(255,255,255,.12);
+  --chip:rgba(255,255,255,.10);
+  --live:#e11d48;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; color:var(--text);
+  background: radial-gradient(80% 120% at 50% 0%, var(--bg1) 0%, var(--bg2) 60%, var(--bg3) 100%);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+/* Topbar */
+.topbar{
+  height:64px; display:flex; align-items:center; justify-content:space-between;
+  padding:0 16px; border-bottom:1px solid var(--border);
+  background: linear-gradient(90deg, var(--bg2), var(--bg1), var(--bg2));
+}
+.topbar .left{display:flex; align-items:center; gap:12px}
+.logo{
+  width:32px;height:32px;border-radius:8px;background:#fff;color:#6d1418;
+  display:flex;align-items:center;justify-content:center;font-weight:900
+}
+.brand{font-weight:600;color:#fff;opacity:.9}
+.menu{display:flex; gap:16px; align-items:center}
+.menu button{
+  background:none;border:none;color:rgba(255,255,255,.75);
+  text-transform:uppercase;letter-spacing:.06em;cursor:pointer;
+  font-weight:600;padding:6px 8px;border-radius:6px;
+}
+.menu button:hover{color:#fff}
+.menu button.active{color:#fff; text-decoration:underline}
+
+/* Kids font + cores */
+.kids-font{font-family:"Libertinus Keyboard", ui-serif, Georgia, serif; letter-spacing:.04em}
+.kids-k{color:#f472b6}
+.kids-i{color:#facc15}
+.kids-d{color:#22c55e}
+.kids-s{color:#38bdf8}
+
+/* Layout */
+.layout{
+  max-width:1120px;margin:16px auto; padding:0 16px;
+  display:grid; grid-template-columns:320px 1fr; gap:16px;
+}
+.sidebar-title{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--textDim); margin-bottom:6px}
+.sidebar .hint{
+  margin-top:10px; font-size:11px; color:var(--textDim);
+  border:1px solid var(--border); border-radius:10px; padding:8px;
+}
+.channel-list{max-height:60vh; overflow:auto; display:flex; flex-direction:column; gap:8px; padding-right:6px}
+.thin-scroll::-webkit-scrollbar{width:8px}
+.thin-scroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:8px}
+
+/* Cards da lista */
+.channel-item{
+  display:flex; align-items:center; gap:12px; width:100%;
+  background:transparent; border:1px solid var(--border); color:var(--text);
+  border-radius:12px; padding:10px 12px; cursor:pointer;
+}
+.channel-item:hover{background:rgba(255,255,255,.06)}
+.channel-item.active{background:rgba(255,255,255,.10); outline:2px solid rgba(244, 63, 94, .4)}
+.channel-logo{width:32px;height:32px; border-radius:8px; background:rgba(0,0,0,.3); display:flex; align-items:center; justify-content:center; overflow:hidden}
+.channel-logo img{width:24px;height:24px;object-fit:contain}
+.channel-logo-fallback{font-weight:700; opacity:.9}
+.channel-texts{min-width:0; display:flex; flex-direction:column}
+.channel-title-row{display:flex; align-items:center; gap:8px; color:#fff}
+.channel-number{width:28px; color:rgba(255,255,255,.7)}
+.channel-name{white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:320px}
+.channel-badge{background:var(--chip); padding:2px 6px; border-radius:999px; font-size:10px; font-weight:700}
+.channel-category{font-size:11px; color:var(--textDim)}
+.channel-live{margin-left:auto; background:var(--live); color:#fff; font-size:10px; border-radius:4px; padding:2px 6px; font-weight:700}
+
+/* Player */
+.player-container{
+  position:relative; border:1px solid var(--border); border-radius:16px;
+  background:#000; box-shadow:0 30px 60px rgba(0,0,0,.35);
+  aspect-ratio:16/9; overflow:hidden;
+}
+#player{position:absolute; inset:0; width:100%; height:100%; border:0}
+
+.live-pill{
+  position:absolute; left:16px; top:12px;
+  display:flex; align-items:center; gap:8px;
+  background:#be123c; color:#fff; font-weight:800; font-size:12px;
+  border-radius:999px; padding:6px 10px; z-index:2;
+}
+.live-pill .dot{width:8px;height:8px;border-radius:999px;background:#fff; animation:pulse 1.2s infinite}
+@keyframes pulse{0%{opacity:.2}50%{opacity:1}100%{opacity:.2}}
+
+.btn-fs{
+  position:absolute; right:12px; top:12px; z-index:2;
+  background:rgba(0,0,0,.45); color:#fff; border:0; border-radius:999px; padding:6px 8px; cursor:pointer;
+}
+.btn-fs:hover{background:rgba(0,0,0,.65)}
+
+.info-bar{
+  position:absolute; left:0; right:0; bottom:0; padding:16px;
+  background:linear-gradient(0deg, rgba(0,0,0,.6), rgba(0,0,0,0));
+}
+.meta{max-width:100%; padding:16px; border-radius:16px; background:linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.5), rgba(0,0,0,0))}
+.meta-label{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--textDim); margin-bottom:6px}
+.meta-row{display:flex; align-items:flex-end; justify-content:space-between; gap:12px}
+.meta-title{margin:0; font-size:26px}
+.meta-subtitle{font-size:13px; color:var(--textDim)}
+
+.footer{max-width:1120px; margin:24px auto; padding:0 16px; text-align:center; font-size:12px; color:var(--textDim)}
+
+/* Responsivo */
+@media (max-width: 900px){
+  .layout{grid-template-columns:1fr}
+}
+
+/* --- Play Shield (primeiro clique) --- */
+.play-shield{
+  position:absolute; inset:0; z-index:3;
+  display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(0deg, rgba(0,0,0,.45), rgba(0,0,0,.15));
+  backdrop-filter: blur(1px);
+}
+.play-btn{
+  appearance:none; border:0; cursor:pointer;
+  font-weight:800; font-size:18px; color:#fff;
+  padding:12px 18px; border-radius:999px;
+  background:rgba(0,0,0,.55);
+  box-shadow:0 8px 24px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.18);
+}
+.play-btn:hover{ background:rgba(0,0,0,.75) }

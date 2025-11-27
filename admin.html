@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel • Fulltv</title>
+
+  <!-- Fonte Kids (só estética, opcional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&display=swap" rel="stylesheet">
+
+  <!-- Reuso do seu CSS (fundo/cores) -->
+  <link rel="stylesheet" href="style.css?v=1">
+
+  <style>
+    /* estilos simples do painel */
+    .admin-wrap{max-width:1120px;margin:24px auto;padding:0 16px}
+    .card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px}
+    .row{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+    .row label{font-size:12px;color:rgba(255,255,255,.75);display:block;margin-bottom:6px}
+    .row input,.row select{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.3);color:#fff}
+    .row .checkbox{display:flex;align-items:center;gap:8px;margin-top:28px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .btn{appearance:none;border:0;border-radius:10px;padding:10px 14px;cursor:pointer;font-weight:700}
+    .btn.primary{background:#22c55e;color:#001105}
+    .btn.secondary{background:#0ea5e9;color:#001018}
+    .btn.warn{background:#f59e0b;color:#150c00}
+    .btn.danger{background:#ef4444;color:#2a0000}
+    table{width:100%;border-collapse:collapse;margin-top:16px}
+    th,td{border-bottom:1px solid rgba(255,255,255,.12);padding:8px;text-align:left;font-size:14px}
+    th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.75)}
+    tr:hover{background:rgba(255,255,255,.04)}
+    .td-actions button{margin-right:6px}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="left">
+      <div class="logo">F</div>
+      <span class="brand">Painel Fulltv</span>
+    </div>
+    <nav class="menu">
+      <a href="./index.html" class="btn" style="text-decoration:none;background:#52525b;color:#fff">← Voltar ao site</a>
+    </nav>
+    <div class="right"></div>
+  </header>
+
+  <main class="admin-wrap">
+    <!-- Formulário -->
+    <section class="card">
+      <h2 style="margin:0 0 12px 0">Cadastrar / Editar Canal</h2>
+      <div class="row">
+        <div>
+          <label for="fNumber">Número</label>
+          <input id="fNumber" type="number" placeholder="ex: 12">
+        </div>
+        <div style="grid-column: span 2">
+          <label for="fName">Nome</label>
+          <input id="fName" type="text" placeholder="ex: ESPN 2">
+        </div>
+        <div>
+          <label for="fCategory">Categoria</label>
+          <select id="fCategory">
+            <option>Abertos</option>
+            <option>Esportes</option>
+            <option>Variedades</option>
+            <option>Kids</option>
+            <option>Destaque</option>
+          </select>
+        </div>
+        <div>
+          <label for="fQuality">Qualidade</label>
+          <select id="fQuality">
+            <option>HD</option>
+            <option>SD</option>
+            <option>FHD</option>
+            <option>4K</option>
+          </select>
+        </div>
+        <div class="checkbox">
+          <input id="fLive" type="checkbox" checked>
+          <label for="fLive" style="margin:0">Ao vivo</label>
+        </div>
+        <div style="grid-column: span 3">
+          <label for="fLogo">Logo URL</label>
+          <input id="fLogo" type="url" placeholder="https://.../logo.png">
+        </div>
+        <div style="grid-column: span 3">
+          <label for="fStream">Stream URL (embed)</label>
+          <input id="fStream" type="url" placeholder="https://.../embed/?id=...">
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="btnAdd" class="btn primary">Salvar canal</button>
+        <button id="btnResetForm" class="btn">Limpar formulário</button>
+        <button id="btnExportJS" class="btn secondary">Exportar channels.js</button>
+        <button id="btnExportJSON" class="btn secondary">Exportar channels.json</button>
+        <button id="btnSavePreview" class="btn warn" title="Usar no site sem publicar (localStorage)">Pré-visualizar no site</button>
+        <button id="btnClearPreview" class="btn danger">Remover pré-visualização</button>
+        <label class="btn" style="background:#6366f1;color:#fff;cursor:pointer">
+          Importar JSON
+          <input id="fileImport" type="file" accept=".json,.js,application/json,text/javascript" style="display:none">
+        </label>
+      </div>
+      <small style="opacity:.8">Dica: “Pré-visualizar no site” salva os canais no navegador. Abra o <strong>index.html</strong> e teste. Se ficar bom, exporte o <strong>channels.js</strong> e publique no GitHub.</small>
+    </section>
+
+    <!-- Tabela -->
+    <section class="card" style="margin-top:16px">
+      <h2 style="margin:0 0 12px 0">Canais</h2>
+      <div style="overflow:auto">
+        <table id="tbl">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nome</th>
+              <th>Categoria</th>
+              <th>Quali.</th>
+              <th>Ao vivo</th>
+              <th>Logo</th>
+              <th>Stream</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Carrega a lista atual e depois o painel -->
+  <script src="channels.js?v=1"></script>
+  <script src="admin.js?v=1"></script>
+</body>
+</html>
