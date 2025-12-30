@@ -1,5 +1,4 @@
-// channels.js — gerado pelo painel Fulltv
-const CHANNELS = [
+[
   {
     "id": 1,
     "number": 1,
@@ -519,65 +518,5 @@ const CHANNELS = [
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/langfr-512px-InvestigationDiscoveryLogo2020.svg.png",
     "live": true,
     "streamUrl": "https://reidoscanais.life/embed/?id=discoveryworld"
-  },
-  {
-    "id": 60,
-    "number": 52,
-    "name": "A Fazenda (Cam 1)",
-    "category": "Destaque",
-    "quality": "HD",
-    "logoUrl": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/08/logo-a-fazenda-17.png?w=419&h=283&crop=0",
-    "live": true,
-    "streamUrl": "https://reidoscanais.life/embed/?id=fazenda17"
-  },
-  {
-    "id": 61,
-    "number": 53,
-    "name": "A Fazenda (Cam 2)",
-    "category": "Destaque",
-    "quality": "HD",
-    "logoUrl": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/08/logo-a-fazenda-17.png?w=419&h=283&crop=0",
-    "live": true,
-    "streamUrl": "https://reidoscanais.life/embed/?id=fazenda17-2"
-  },
-  {
-    "id": 62,
-    "number": 54,
-    "name": "A Fazenda (Cam 3)",
-    "category": "Destaque",
-    "quality": "HD",
-    "logoUrl": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/08/logo-a-fazenda-17.png?w=419&h=283&crop=0",
-    "live": true,
-    "streamUrl": "https://reidoscanais.life/embed/?id=fazenda17-3"
-  },
-  {
-    "id": 63,
-    "number": 55,
-    "name": "A Fazenda (Cam 4)",
-    "category": "Destaque",
-    "quality": "HD",
-    "logoUrl": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/08/logo-a-fazenda-17.png?w=419&h=283&crop=0",
-    "live": true,
-    "streamUrl": "https://reidoscanais.life/embed/?id=fazenda17-4"
-  },
-  {
-    "id": 64,
-    "number": 56,
-    "name": "A Fazenda (Cam 5)",
-    "category": "Destaque",
-    "quality": "HD",
-    "logoUrl": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/08/logo-a-fazenda-17.png?w=419&h=283&crop=0",
-    "live": true,
-    "streamUrl": "https://reidoscanais.life/embed/?id=fazenda17-5"
-  },
-  {
-    "id": 65,
-    "number": 57,
-    "name": "A Fazenda (Cam 6)",
-    "category": "Destaque",
-    "quality": "HD",
-    "logoUrl": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/08/logo-a-fazenda-17.png?w=419&h=283&crop=0",
-    "live": true,
-    "streamUrl": "https://reidoscanais.life/embed/?id=fazenda17-6"
   }
-];
+]
