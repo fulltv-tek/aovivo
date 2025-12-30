@@ -1,4 +1,5 @@
-[
+// channels.js — gerado pelo painel Fulltv
+const CHANNELS = [
   {
     "id": 1,
     "number": 1,
@@ -519,4 +520,4 @@
     "live": true,
     "streamUrl": "https://reidoscanais.life/embed/?id=discoveryworld"
   }
-]
+];
