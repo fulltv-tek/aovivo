@@ -1,16 +1,6 @@
 // channels.js — gerado pelo painel Fulltv
 const CHANNELS = [
   {
-    "id": "a1214ba9-c5d2-4168-b25d-1ed257b3f0b1",
-    "number": 1,
-    "name": "BBB 26",
-    "category": "Destaque",
-    "quality": "HD",
-    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Logo_Big_Brother_Brasil.png",
-    "streamUrl": "https://simp6.selti-delivery.ru/images3/Banner-BBB-1a6034da8845bc537.md.png"
-    "live": true
-  },
-  {
     "id": 1,
     "number": 2,
     "name": "Globo SP",
