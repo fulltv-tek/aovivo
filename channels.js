@@ -7,7 +7,7 @@ const CHANNELS = [
     "category": "Destaque",
     "quality": "HD",
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Logo_Big_Brother_Brasil.png",
-    "streamUrl": <img src="https://simp6.selti-delivery.ru/images3/Banner-BBB-1a6034da8845bc537.png" alt="Banner-BBB-1a6034da8845bc537.png" border="0" />,
+    "streamUrl": "[img]https://simp6.selti-delivery.ru/images3/Banner-BBB-1a6034da8845bc537.png[/img]/>,"
     "live": true
   },
   {
