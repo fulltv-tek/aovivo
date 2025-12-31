@@ -1,8 +1,18 @@
 // channels.js — gerado pelo painel Fulltv
 const CHANNELS = [
   {
-    "id": 1,
+    "id": "0c85b6e5-050d-4284-a3fb-f990b1fd4840",
     "number": 1,
+    "name": "BBB 26",
+    "category": "Destaque",
+    "quality": "HD",
+    "logoUrl": "https://logodownload.org/bbb-logo-big-brother-brasil-logo/",
+    "streamUrl": "https://melhorinvestimento.net/noticias/bbb-26-premio-exposto-ex-bbbs",
+    "live": true
+  },
+  {
+    "id": 1,
+    "number": 2,
     "name": "Globo SP",
     "category": "Abertos",
     "quality": "HD",
@@ -12,7 +22,7 @@ const CHANNELS = [
   },
   {
     "id": 2,
-    "number": 2,
+    "number": 3,
     "name": "Globo RJ",
     "category": "Abertos",
     "quality": "HD",
@@ -22,7 +32,7 @@ const CHANNELS = [
   },
   {
     "id": 3,
-    "number": 3,
+    "number": 4,
     "name": "SBT",
     "category": "Abertos",
     "quality": "HD",
@@ -32,7 +42,7 @@ const CHANNELS = [
   },
   {
     "id": 4,
-    "number": 4,
+    "number": 5,
     "name": "BAND",
     "category": "Abertos",
     "quality": "HD",
@@ -42,7 +52,7 @@ const CHANNELS = [
   },
   {
     "id": 5,
-    "number": 5,
+    "number": 6,
     "name": "Record",
     "category": "Abertos",
     "quality": "HD",
@@ -52,7 +62,7 @@ const CHANNELS = [
   },
   {
     "id": 12,
-    "number": 6,
+    "number": 7,
     "name": "ESPN",
     "category": "Esportes",
     "quality": "HD",
@@ -62,7 +72,7 @@ const CHANNELS = [
   },
   {
     "id": 13,
-    "number": 7,
+    "number": 8,
     "name": "ESPN 2",
     "category": "Esportes",
     "quality": "HD",
@@ -72,7 +82,7 @@ const CHANNELS = [
   },
   {
     "id": 14,
-    "number": 8,
+    "number": 9,
     "name": "ESPN 3",
     "category": "Esportes",
     "quality": "HD",
@@ -82,7 +92,7 @@ const CHANNELS = [
   },
   {
     "id": 15,
-    "number": 9,
+    "number": 10,
     "name": "ESPN 4",
     "category": "Esportes",
     "quality": "HD",
@@ -92,7 +102,7 @@ const CHANNELS = [
   },
   {
     "id": 16,
-    "number": 10,
+    "number": 11,
     "name": "ESPN 5",
     "category": "Esportes",
     "quality": "HD",
@@ -102,7 +112,7 @@ const CHANNELS = [
   },
   {
     "id": 17,
-    "number": 11,
+    "number": 12,
     "name": "Sportv",
     "category": "Esportes",
     "quality": "HD",
@@ -112,7 +122,7 @@ const CHANNELS = [
   },
   {
     "id": 18,
-    "number": 12,
+    "number": 13,
     "name": "Sportv 2",
     "category": "Esportes",
     "quality": "HD",
@@ -122,7 +132,7 @@ const CHANNELS = [
   },
   {
     "id": 19,
-    "number": 13,
+    "number": 14,
     "name": "Sportv 3",
     "category": "Esportes",
     "quality": "HD",
@@ -132,7 +142,7 @@ const CHANNELS = [
   },
   {
     "id": 23,
-    "number": 14,
+    "number": 15,
     "name": "Band Sports",
     "category": "Esportes",
     "quality": "HD",
@@ -142,7 +152,7 @@ const CHANNELS = [
   },
   {
     "id": 24,
-    "number": 15,
+    "number": 16,
     "name": "Xsports",
     "category": "Abertos",
     "quality": "HD",
@@ -152,7 +162,7 @@ const CHANNELS = [
   },
   {
     "id": 25,
-    "number": 16,
+    "number": 17,
     "name": "Globonews",
     "category": "Noticias",
     "quality": "HD",
@@ -162,7 +172,7 @@ const CHANNELS = [
   },
   {
     "id": 26,
-    "number": 17,
+    "number": 18,
     "name": "Premiere 1",
     "category": "Esportes",
     "quality": "HD",
@@ -172,7 +182,7 @@ const CHANNELS = [
   },
   {
     "id": 27,
-    "number": 18,
+    "number": 19,
     "name": "Premiere 2",
     "category": "Esportes",
     "quality": "HD",
@@ -182,7 +192,7 @@ const CHANNELS = [
   },
   {
     "id": 28,
-    "number": 19,
+    "number": 20,
     "name": "Premiere 3",
     "category": "Esportes",
     "quality": "HD",
@@ -192,7 +202,7 @@ const CHANNELS = [
   },
   {
     "id": 29,
-    "number": 20,
+    "number": 21,
     "name": "Premiere 4",
     "category": "Esportes",
     "quality": "HD",
@@ -202,7 +212,7 @@ const CHANNELS = [
   },
   {
     "id": 30,
-    "number": 21,
+    "number": 22,
     "name": "Premiere 5",
     "category": "Esportes",
     "quality": "HD",
@@ -212,7 +222,7 @@ const CHANNELS = [
   },
   {
     "id": 31,
-    "number": 22,
+    "number": 23,
     "name": "Premiere 6",
     "category": "Esportes",
     "quality": "HD",
@@ -222,7 +232,7 @@ const CHANNELS = [
   },
   {
     "id": 32,
-    "number": 23,
+    "number": 24,
     "name": "Premiere 7",
     "category": "Esportes",
     "quality": "HD",
@@ -232,7 +242,7 @@ const CHANNELS = [
   },
   {
     "id": 33,
-    "number": 24,
+    "number": 25,
     "name": "MAX 1",
     "category": "Esportes",
     "quality": "HD",
@@ -242,7 +252,7 @@ const CHANNELS = [
   },
   {
     "id": 34,
-    "number": 25,
+    "number": 26,
     "name": "MAX 2",
     "category": "Esportes",
     "quality": "HD",
@@ -252,7 +262,7 @@ const CHANNELS = [
   },
   {
     "id": 35,
-    "number": 26,
+    "number": 27,
     "name": "MAX 3",
     "category": "Esportes",
     "quality": "HD",
@@ -262,7 +272,7 @@ const CHANNELS = [
   },
   {
     "id": "347992ad-0bcf-4f78-85ea-ee9c74ed2865",
-    "number": 27,
+    "number": 28,
     "name": "MAX 4",
     "category": "Esportes",
     "quality": "HD",
@@ -272,7 +282,7 @@ const CHANNELS = [
   },
   {
     "id": 36,
-    "number": 28,
+    "number": 29,
     "name": "Paramount+",
     "category": "Esportes",
     "quality": "HD",
@@ -282,7 +292,7 @@ const CHANNELS = [
   },
   {
     "id": 37,
-    "number": 29,
+    "number": 30,
     "name": "Paramount+ 2",
     "category": "Esportes",
     "quality": "HD",
@@ -292,7 +302,7 @@ const CHANNELS = [
   },
   {
     "id": 38,
-    "number": 30,
+    "number": 31,
     "name": "Paramount+ 3",
     "category": "Esportes",
     "quality": "HD",
@@ -302,7 +312,7 @@ const CHANNELS = [
   },
   {
     "id": 39,
-    "number": 31,
+    "number": 32,
     "name": "Prime Video",
     "category": "Esportes",
     "quality": "HD",
@@ -312,7 +322,7 @@ const CHANNELS = [
   },
   {
     "id": 40,
-    "number": 32,
+    "number": 33,
     "name": "Prime Video 2",
     "category": "Esportes",
     "quality": "HD",
@@ -322,7 +332,7 @@ const CHANNELS = [
   },
   {
     "id": 41,
-    "number": 33,
+    "number": 34,
     "name": "Prime Video 3",
     "category": "Esportes",
     "quality": "HD",
@@ -332,7 +342,7 @@ const CHANNELS = [
   },
   {
     "id": 41,
-    "number": 33,
+    "number": 34,
     "name": "Prime Video 3",
     "category": "Esportes",
     "quality": "HD",
@@ -342,7 +352,7 @@ const CHANNELS = [
   },
   {
     "id": 42,
-    "number": 34,
+    "number": 35,
     "name": "Animal Planet",
     "category": "Variedades",
     "quality": "HD",
@@ -352,7 +362,7 @@ const CHANNELS = [
   },
   {
     "id": 43,
-    "number": 35,
+    "number": 36,
     "name": "Discovery Kids",
     "category": "Kids",
     "quality": "HD",
@@ -362,7 +372,7 @@ const CHANNELS = [
   },
   {
     "id": 44,
-    "number": 36,
+    "number": 37,
     "name": "Nickelodeon",
     "category": "Kids",
     "quality": "HD",
@@ -372,7 +382,7 @@ const CHANNELS = [
   },
   {
     "id": 45,
-    "number": 37,
+    "number": 38,
     "name": "Nick jr",
     "category": "Kids",
     "quality": "HD",
@@ -382,7 +392,7 @@ const CHANNELS = [
   },
   {
     "id": 46,
-    "number": 38,
+    "number": 39,
     "name": "Gloobinho",
     "category": "Kids",
     "quality": "HD",
@@ -392,7 +402,7 @@ const CHANNELS = [
   },
   {
     "id": 47,
-    "number": 39,
+    "number": 40,
     "name": "Multishow",
     "category": "Variedades",
     "quality": "HD",
@@ -402,7 +412,7 @@ const CHANNELS = [
   },
   {
     "id": 48,
-    "number": 40,
+    "number": 41,
     "name": "History",
     "category": "Variedades",
     "quality": "HD",
@@ -412,7 +422,7 @@ const CHANNELS = [
   },
   {
     "id": 49,
-    "number": 41,
+    "number": 42,
     "name": "History 2",
     "category": "Variedades",
     "quality": "HD",
@@ -422,7 +432,7 @@ const CHANNELS = [
   },
   {
     "id": 50,
-    "number": 42,
+    "number": 43,
     "name": "Space",
     "category": "Variedades",
     "quality": "HD",
@@ -432,7 +442,7 @@ const CHANNELS = [
   },
   {
     "id": 51,
-    "number": 43,
+    "number": 44,
     "name": "TNT",
     "category": "Variedades",
     "quality": "HD",
@@ -442,7 +452,7 @@ const CHANNELS = [
   },
   {
     "id": 52,
-    "number": 44,
+    "number": 45,
     "name": "Discovery Channel",
     "category": "Variedades",
     "quality": "HD",
@@ -452,7 +462,7 @@ const CHANNELS = [
   },
   {
     "id": 53,
-    "number": 45,
+    "number": 46,
     "name": "Discovery H&H",
     "category": "Variedades",
     "quality": "HD",
@@ -462,7 +472,7 @@ const CHANNELS = [
   },
   {
     "id": 54,
-    "number": 46,
+    "number": 47,
     "name": "Food Network",
     "category": "Variedades",
     "quality": "HD",
@@ -472,7 +482,7 @@ const CHANNELS = [
   },
   {
     "id": 55,
-    "number": 47,
+    "number": 48,
     "name": "TLC",
     "category": "Variedades",
     "quality": "HD",
@@ -482,7 +492,7 @@ const CHANNELS = [
   },
   {
     "id": 56,
-    "number": 48,
+    "number": 49,
     "name": "National Geographic",
     "category": "Variedades",
     "quality": "HD",
@@ -492,7 +502,7 @@ const CHANNELS = [
   },
   {
     "id": 57,
-    "number": 49,
+    "number": 50,
     "name": "GNT",
     "category": "Variedades",
     "quality": "HD",
@@ -502,7 +512,7 @@ const CHANNELS = [
   },
   {
     "id": 58,
-    "number": 50,
+    "number": 51,
     "name": "Discovery ID",
     "category": "Variedades",
     "quality": "HD",
@@ -512,12 +522,22 @@ const CHANNELS = [
   },
   {
     "id": 59,
-    "number": 51,
+    "number": 52,
     "name": "Discovery World",
     "category": "Variedades",
     "quality": "HD",
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/langfr-512px-InvestigationDiscoveryLogo2020.svg.png",
     "live": true,
     "streamUrl": "https://reidoscanais.life/embed/?id=discoveryworld"
+  },
+  {
+    "id": "5bb29e61-1cd2-47d7-8f12-bdf7c8387b2d",
+    "number": 53,
+    "name": "SBT News",
+    "category": "Abertos",
+    "quality": "HD",
+    "logoUrl": "https://api.reidoscanais.io/img/sbtnews.png",
+    "streamUrl": "https://rdcanais.top/sbtnews",
+    "live": true
   }
 ];
