@@ -7,7 +7,7 @@ const CHANNELS = [
     "category": "Destaque",
     "quality": "HD",
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Logo_Big_Brother_Brasil.png",
-    "streamUrl": "https://melhorinvestimento.net/wp-content/uploads/2025/10/BBB-26-1.jpg",
+    "streamUrl": "https://simp6.selti-delivery.ru/images3/Banner-BBBce799b99cf0221b7.png",
     "live": true
   },
   {
