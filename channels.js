@@ -381,28 +381,8 @@ const CHANNELS = [
     "streamUrl": "https://reidoscanais.life/embed/?id=discoverykids"
   },
   {
-    "id": 44,
-    "number": 39,
-    "name": "Nickelodeon",
-    "category": "Kids",
-    "quality": "HD",
-    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Nickelodeon_2009_logo.svg/512px-Nickelodeon_2009_logo.svg.png",
-    "live": true,
-    "streamUrl": "https://reidoscanais.life/embed/?id=nickelodeon"
-  },
-  {
-    "id": 45,
-    "number": 40,
-    "name": "Nick jr",
-    "category": "Kids",
-    "quality": "HD",
-    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Nick_Jr._logo_2009.svg/512px-Nick_Jr._logo_2009.svg.png",
-    "live": true,
-    "streamUrl": "https://reidoscanais.life/embed/?id=nickjr"
-  },
-  {
     "id": 46,
-    "number": 41,
+    "number": 39,
     "name": "Gloobinho",
     "category": "Kids",
     "quality": "HD",
@@ -412,7 +392,7 @@ const CHANNELS = [
   },
   {
     "id": 47,
-    "number": 42,
+    "number": 40,
     "name": "Multishow",
     "category": "Variedades",
     "quality": "HD",
@@ -422,7 +402,7 @@ const CHANNELS = [
   },
   {
     "id": 48,
-    "number": 43,
+    "number": 41,
     "name": "History",
     "category": "Variedades",
     "quality": "HD",
@@ -432,7 +412,7 @@ const CHANNELS = [
   },
   {
     "id": 49,
-    "number": 44,
+    "number": 42,
     "name": "History 2",
     "category": "Variedades",
     "quality": "HD",
@@ -442,7 +422,7 @@ const CHANNELS = [
   },
   {
     "id": 50,
-    "number": 45,
+    "number": 43,
     "name": "Space",
     "category": "Variedades",
     "quality": "HD",
@@ -452,7 +432,7 @@ const CHANNELS = [
   },
   {
     "id": 51,
-    "number": 46,
+    "number": 44,
     "name": "TNT",
     "category": "Variedades",
     "quality": "HD",
@@ -462,7 +442,7 @@ const CHANNELS = [
   },
   {
     "id": 52,
-    "number": 47,
+    "number": 45,
     "name": "Discovery Channel",
     "category": "Variedades",
     "quality": "HD",
@@ -472,7 +452,7 @@ const CHANNELS = [
   },
   {
     "id": 53,
-    "number": 48,
+    "number": 46,
     "name": "Discovery H&H",
     "category": "Variedades",
     "quality": "HD",
@@ -482,7 +462,7 @@ const CHANNELS = [
   },
   {
     "id": 54,
-    "number": 49,
+    "number": 47,
     "name": "Food Network",
     "category": "Variedades",
     "quality": "HD",
@@ -492,7 +472,7 @@ const CHANNELS = [
   },
   {
     "id": 55,
-    "number": 50,
+    "number": 48,
     "name": "TLC",
     "category": "Variedades",
     "quality": "HD",
@@ -502,7 +482,7 @@ const CHANNELS = [
   },
   {
     "id": 56,
-    "number": 51,
+    "number": 49,
     "name": "National Geographic",
     "category": "Variedades",
     "quality": "HD",
@@ -512,7 +492,7 @@ const CHANNELS = [
   },
   {
     "id": 57,
-    "number": 52,
+    "number": 50,
     "name": "GNT",
     "category": "Variedades",
     "quality": "HD",
@@ -522,7 +502,7 @@ const CHANNELS = [
   },
   {
     "id": 58,
-    "number": 53,
+    "number": 51,
     "name": "Discovery ID",
     "category": "Variedades",
     "quality": "HD",
@@ -532,7 +512,7 @@ const CHANNELS = [
   },
   {
     "id": 59,
-    "number": 54,
+    "number": 52,
     "name": "Discovery World",
     "category": "Variedades",
     "quality": "HD",
@@ -542,12 +522,32 @@ const CHANNELS = [
   },
   {
     "id": "5bb29e61-1cd2-47d7-8f12-bdf7c8387b2d",
-    "number": 55,
+    "number": 53,
     "name": "SBT News",
     "category": "Noticias",
     "quality": "HD",
     "logoUrl": "https://api.reidoscanais.io/img/sbtnews.png",
     "streamUrl": "https://rdcanais.top/sbtnews",
+    "live": true
+  },
+  {
+    "id": "1fabacb5-a88b-4b9b-a502-ac7967327267",
+    "number": 54,
+    "name": "Cartoon Network",
+    "category": "Kids",
+    "quality": "HD",
+    "logoUrl": "https://logodownload.org/wp-content/uploads/2018/06/cartoon-network-logo-9.png",
+    "streamUrl": "https://rdcanais.top/cartoonnetwork",
+    "live": true
+  },
+  {
+    "id": "58b548e2-24b8-4d1b-857c-52af6b777fb6",
+    "number": 55,
+    "name": "Cartoonito",
+    "category": "Kids",
+    "quality": "HD",
+    "logoUrl": "https://marcaspelomundo.com.br/wp-content/uploads/2021/11/Cartoonito-Logo-02.png",
+    "streamUrl": "https://rdcanais.top/cartoonito",
     "live": true
   }
 ];
