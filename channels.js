@@ -1,13 +1,13 @@
 // channels.js — gerado pelo painel Fulltv
 const CHANNELS = [
   {
-    "id": "0c85b6e5-050d-4284-a3fb-f990b1fd4840",
+    "id": "a1214ba9-c5d2-4168-b25d-1ed257b3f0b1",
     "number": 1,
     "name": "BBB 26",
     "category": "Destaque",
     "quality": "HD",
-    "logoUrl": "https://logodownload.org/bbb-logo-big-brother-brasil-logo/",
-    "streamUrl": "https://melhorinvestimento.net/noticias/bbb-26-premio-exposto-ex-bbbs",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Logo_Big_Brother_Brasil.png",
+    "streamUrl": "https://melhorinvestimento.net/wp-content/uploads/2025/10/BBB-26-1.jpg",
     "live": true
   },
   {
@@ -534,7 +534,7 @@ const CHANNELS = [
     "id": "5bb29e61-1cd2-47d7-8f12-bdf7c8387b2d",
     "number": 53,
     "name": "SBT News",
-    "category": "Abertos",
+    "category": "Noticias",
     "quality": "HD",
     "logoUrl": "https://api.reidoscanais.io/img/sbtnews.png",
     "streamUrl": "https://rdcanais.top/sbtnews",
